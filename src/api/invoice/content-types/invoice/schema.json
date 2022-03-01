@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoiceTime": {
+      "type": "datetime"
+    },
+    "kilometer": {
+      "type": "decimal"
+    },
+    "diesel": {
+      "type": "decimal"
+    },
+    "dieselCost": {
+      "type": "decimal"
+    },
+    "milage": {
+      "type": "decimal"
+    },
+    "totalAmount": {
+      "type": "decimal"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::booking.booking"
+    },
+    "trip": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trip.trip"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    }
+  }
+}

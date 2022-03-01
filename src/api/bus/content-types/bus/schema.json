@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buses",
+  "info": {
+    "singularName": "bus",
+    "pluralName": "buses",
+    "displayName": "Bus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "busNumber": {
+      "type": "string"
+    },
+    "rc": {
+      "type": "string"
+    },
+    "fc": {
+      "type": "string"
+    },
+    "insurance": {
+      "type": "string"
+    },
+    "insuranceExpiry": {
+      "type": "date"
+    },
+    "license": {
+      "type": "string"
+    },
+    "rcFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "fcFile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "trip": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trip.trip",
+      "inversedBy": "buses"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "diesel": {
+      "type": "decimal"
+    },
+    "kilometer": {
+      "type": "decimal"
+    },
+    "fasttag": {
+      "type": "decimal"
+    },
+    "quotedPrice": {
+      "type": "decimal"
+    },
+    "advancePaid": {
+      "type": "decimal"
+    },
+    "balanceAmount": {
+      "type": "decimal"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    },
+    "trip": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trip.trip"
+    }
+  }
+}
