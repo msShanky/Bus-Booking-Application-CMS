@@ -1,6 +1,6 @@
 const path = require("path");
 const parse = require("pg-connection-string").parse;
-const config = parse(process.env.DATABASE_URL);
+const config = parse(process.env.DATABASE_URL ?? "");
 
 const preview = (env) => {
   return {
@@ -60,4 +60,5 @@ module.exports = ({ env }) => {
     : env("ENV") === "preview"
     ? preview(env)
     : dev(env);
+  // return dev(env);
 };

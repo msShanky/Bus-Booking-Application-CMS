@@ -4,7 +4,8 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "Client"
+    "displayName": "Client",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,11 @@
     },
     "contact": {
       "type": "biginteger"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::booking.booking"
     }
   }
 }

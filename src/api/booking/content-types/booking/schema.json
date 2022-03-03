@@ -39,6 +39,19 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::trip.trip"
+    },
+    "bookingState": {
+      "type": "enumeration",
+      "enum": [
+        "Invoiced",
+        "Booked",
+        "InTransit"
+      ]
+    },
+    "invoice": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::invoice.invoice"
     }
   }
 }
