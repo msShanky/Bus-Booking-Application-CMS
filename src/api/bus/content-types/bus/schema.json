@@ -30,33 +30,19 @@
     "license": {
       "type": "string"
     },
-    "rcFile": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "fcFile": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "trip": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::trip.trip",
       "inversedBy": "buses"
+    },
+    "documents": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

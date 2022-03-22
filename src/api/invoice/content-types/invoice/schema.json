@@ -12,8 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "invoiceTime": {
-      "type": "datetime"
+    "invoiceDate": {
+      "type": "date"
     },
     "kilometer": {
       "type": "decimal"
