@@ -43,7 +43,7 @@ const dev = (env) => {
       client: "postgres",
       connection: {
         host: env("DATABASE_HOST", "127.0.0.1"),
-        port: env.int("DATABASE_PORT", 5432),
+        port: env.int("DATABASE_PORT", 5433),
         database: env("DATABASE_NAME", "bus_booking"),
         user: env("DATABASE_USERNAME", "bus_booking_application"),
         password: env("DATABASE_PASSWORD", "bus_booking_00_11"),
