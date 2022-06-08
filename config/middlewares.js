@@ -10,6 +10,10 @@ module.exports = [
         "X-Frame-Options",
         "X-Requested-With",
       ],
+      origin: env(
+        "CORS_ORIGIN",
+        "http://localhost:3000,http://localhost:8000,http://localhost:1377"
+      ).split(','),
     },
   },
   "strapi::poweredBy",
