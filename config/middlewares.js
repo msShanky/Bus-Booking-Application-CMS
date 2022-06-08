@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) => [
   "strapi::errors",
   "strapi::security",
   {
@@ -13,7 +13,7 @@ module.exports = [
       origin: env(
         "CORS_ORIGIN",
         "http://localhost:3000,http://localhost:8000,http://localhost:1377"
-      ).split(','),
+      ).split(","),
     },
   },
   "strapi::poweredBy",
